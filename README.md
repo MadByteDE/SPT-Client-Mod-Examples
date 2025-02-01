@@ -17,7 +17,7 @@ It's a fork of Jehree's [SPTClientModExamples](https://github.com/Jehree/SPTClie
 **Reference assemblies**
 
 - Get the [reference assemblies]((https://github.com/mono/reference-assemblies))
-- move them into `/lib/mono` & rename the directories to e.g `4.7.1-api` instead of `v4.7.1`
+- move them into `/usr/lib/mono` & rename the directories from e.g `v4.7.1` to `4.7.1-api`
 
 Alternatively you can customize the path(s) in the `netfx.props` file to point to the correct assemblies.
 
