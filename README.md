@@ -1,22 +1,56 @@
-SPTClientModExamples
+## SPT client mod examples
 
-Use this as a starting point to create your own client mods!
+This repository can be used as a template for developing / building SPT client mod projects on Linux.
+
+It's a fork of Jehree's [SPTClientModExamples](https://github.com/Jehree/SPTClientModExamples) repo.
+
+## Prerequisites
+
+- Mono SDK
+- .NET 9.x SDK
+- VSCode / VSCodium
+- git
+- [.NET 4.x reference assemblies](https://github.com/mono/reference-assemblies)
+
+## Setting up the environment
+
+**Reference assemblies**
+
+- Get the [reference assemblies]((https://github.com/mono/reference-assemblies))
+- move them into `/lib/mono` & rename the directories to e.g `4.7.1-api` instead of `v4.7.1`
+
+Alternatively you can customize the path(s) in the `netfx.props` file to point to the correct assemblies.
+
+**SPT development directory**
+
+For simplicity, it's recommended to create a new `development` directory inside your installation of SPTarkov, e.g `~/Games/escape-from-tarkov/drive_c/SPTarkov`. 
+
+This will make it easier to reference modules in the game directory like this:
+
+```c#
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+```
 
 
+## Usage as template for new projects
 
-If you would like to rename the SPTClientModExamples project to use as a starting point for your own mod:
-
-1. Use something like GitBash to clone the repo into a folder on your computer (https://git-scm.com/downloads) or download it manually with **Code > Download ZIP**
-2. Delete the **.git** folder
-3. Rename the following from _SPTClientModExamples_ to your new mod name:
-    * Folder the project is in
+1. Clone this repo
+2. Rename the following from `SPTClientModExamples` to your new mod name:
+    * The base project directory
     * **.csproj** file
-    * **.sln** file
-4. Open the **.sln** file with a text editor, CTRL+F for _SPTClientModExamples_ and replace it with your new mod name
-5. Open the **.csproj** file with a text editor, CTRL+F for _SPTClientModExamples_ and replace it with your new mod name
-6. Open your solution by double clicking your **.sln** file, double click **Plugin.cs**
-7. Press CTRL + Shift + F, click Replace in Files
-    * make sure **Look in** is set to **Entire solution**
-    * in Find field, enter: _SPTClientModExamples_
-    * in Replace field, enter your new mod name
-    * click Replace All in bottom right, click yes if prompted
+3. Open the **.csproj** file with a text editor, search for `SPTClientModExamples` and replace it with your new mod name
+4. Press `CTRL + Shift + F`, click Replace in Files
+    * in **Find** field, enter: `SPTClientModExamples`
+    * in **Replace** field, enter your new mod name
+    * click `Replace All` in bottom right, click `yes` if prompted
+
+## Building
+
+To build the project, use:
+
+```bash
+    dotnet build --configuration Release # to build using the Release config
+    dotnet build --configuration Debug # to build using the Debug config
+```
