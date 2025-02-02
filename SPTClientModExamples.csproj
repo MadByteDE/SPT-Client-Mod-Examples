@@ -42,6 +42,9 @@
       <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
 
+    <!-- System -->
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51"/>
+    
     <!-- BepInEx -->
     <Reference Include="BepInEx">
       <HintPath>$(GameDir)\BepInEx\core\BepInEx.dll</HintPath>
@@ -51,31 +54,26 @@
     </Reference>
 
     <!-- SPT -->
+    <Reference Include="spt-custom">
+      <HintPath>$(GameDir)\BepInEx\plugins\spt\spt-custom.dll</HintPath>
+    </Reference>
     <Reference Include="spt-common">
       <HintPath>$(GameDir)\BepInEx\plugins\spt\spt-common.dll</HintPath>
+    </Reference>
+    <Reference Include="spt-prepatch">
+      <HintPath>$(GameDir)\BepInEx\patchers\spt-prepatch.dll</HintPath>
     </Reference>
     <Reference Include="spt-reflection">
       <HintPath>$(GameDir)\BepInEx\plugins\spt\spt-reflection.dll</HintPath>
     </Reference>
 
     <!-- Unity -->
-    <Reference Include="Comfort">
-      <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\Comfort.dll</HintPath>
-    </Reference>
-    <Reference Include="Comfort.Unity, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\Comfort.Unity.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
@@ -108,6 +106,13 @@
     </Reference>
 
     <!-- Utils -->
+    <Reference Include="Comfort">
+      <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\Comfort.dll</HintPath>
+    </Reference>
+    <Reference Include="Comfort.Unity, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\Comfort.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="DOTween, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(GameDir)\EscapeFromTarkov_Data\Managed\DOTween.dll</HintPath>
@@ -126,8 +131,8 @@
     </Reference>
   </ItemGroup>
 
-<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-  <Exec Command="cp './bin/$(Configuration)/$(TargetFramework)/$(AssemblyName).dll' '$(GameDir)/BepInEx/plugins'" />
-</Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="cp './bin/$(Configuration)/$(TargetFramework)/$(AssemblyName).dll' '$(GameDir)/BepInEx/plugins'" />
+  </Target>
 
 </Project>
