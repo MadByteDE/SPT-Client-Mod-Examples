@@ -9,38 +9,19 @@ It's a fork of Jehree's [SPTClientModExamples](https://github.com/Jehree/SPTClie
 - .NET 9.x SDK
 - VSCode / VSCodium
 
-## Setting up the environment
+## Usage as template for a new project
 
-**SPT development directory**
-
-For simplicity, it's recommended to create a new `development` directory inside your installation of SPTarkov, e.g `~/Games/escape-from-tarkov/drive_c/SPTarkov`. 
-
-This will make it easier to reference modules in the game directory like this:
-
-```c#
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-```
-
-
-## Usage as template for new projects
-
-1. Clone this repo
-2. Rename the following from `SPTClientModExamples` to your new mod name:
-    * The base project directory
-    * **.csproj** file
-3. Open the **.csproj** file with a text editor, search for `SPTClientModExamples` and replace it with your new mod name
-4. Press `CTRL + Shift + F`, click Replace in Files
-    * in **Find** field, enter: `SPTClientModExamples`
-    * in **Replace** field, enter your new mod name
-    * click `Replace All` in bottom right, click `yes` if prompted
+1. Clone the repository
+2. Replace all occurrences of `SPTClientModExamples` in the project
+3. Change the `AUTHOR` in `Plugin.cs`
+4. Generate a new GUID and replace the `ProjectGuid` in the *.csproj file
+5. Add optional info in `Properties/AssemblyInfo.cs`
 
 ## Building
 
-To build the project, use:
+To build the project, either use `CTRL+SHIFT+B` and selected a pre-defined task **OR** run:
 
 ```bash
-    dotnet build --configuration Release # to build using the Release config
-    dotnet build --configuration Debug # to build using the Debug config
+    dotnet build --configuration Release # to build using the 'Release' config
+    dotnet build --configuration Debug # to build using the 'Debug' config
 ```
