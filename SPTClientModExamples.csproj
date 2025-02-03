@@ -6,7 +6,7 @@
     <AssemblyName>SPTClientModExamples</AssemblyName>
     <GameDir>..\..</GameDir>
     <ProjectGuid>{9076ADE2-F4EE-4B5D-B9A6-29A054CF0A7E}</ProjectGuid>
-    <TargetFrameworks>net472</TargetFrameworks>
+    <TargetFramework>net472</TargetFramework>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
