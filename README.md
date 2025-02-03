@@ -18,7 +18,7 @@ A template/example project for creating SPT client mods on Linux.
 - Set it to the SPT install directory
 
 > [!NOTE]
-> <span style="color:lightblue">By default the project directory is assumed to be inside a sub-directory of the game e.g. `../development/SPTClientModExamples/`</span>
+> <span style="color:lightblue">By default the project directory is assumed to be inside the game directory e.g. `../development/SPTClientModExamples/`</span>
 
 #### 3. Replace all occurrences of `SPTClientModExamples` in the project
 #### 4. Change the `AUTHOR` in `Plugin.cs`
