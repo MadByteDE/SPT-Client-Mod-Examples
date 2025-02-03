@@ -1,21 +1,29 @@
 ## SPT client mod examples
 
-This repository can be used as a template for developing / building SPT client mod projects on Linux.
-
-It's a fork of Jehree's [SPTClientModExamples](https://github.com/Jehree/SPTClientModExamples) repo.
+A template/example project for creating SPT client mods on Linux.
 
 ## Prerequisites
 
-- .NET 9.x SDK
-- VSCode / VSCodium
+- **.NET 9.x SDK**
+- **VSCode / VSCodium**
 
 ## Usage as template for a new project
 
-1. Clone the repository
-2. Replace all occurrences of `SPTClientModExamples` in the project
-3. Change the `AUTHOR` in `Plugin.cs`
-4. Generate a new GUID and replace the `ProjectGuid` in the *.csproj file
-5. Add optional info in `Properties/AssemblyInfo.cs`
+#### 1. Clone the repository
+
+    git clone https://github.com/MadByteDE/SPT-Client-Mod-Examples.git
+
+#### 2. Edit the `GameDir` property in the `*.csproj` file
+
+- Set it to the root SPT install directory
+
+    > [!NOTE]
+    > <span style="color:lightblue">By default we assume the project directory to be located in a sub-directory of the game directory e.g. `../development/SPTClientModExamples/`</span>
+
+#### 3. Replace all occurrences of `SPTClientModExamples` in the project
+#### 4. Change the `AUTHOR` in `Plugin.cs`
+#### 5. Generate a new GUID and replace the `ProjectGuid` in the `*.csproj` file
+#### 6. Set optional attributes in `Properties/AssemblyInfo.cs`
 
 ## Building
 
