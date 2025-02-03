@@ -6,21 +6,10 @@ It's a fork of Jehree's [SPTClientModExamples](https://github.com/Jehree/SPTClie
 
 ## Prerequisites
 
-- Mono SDK
 - .NET 9.x SDK
 - VSCode / VSCodium
-- git
-- [.NET 4.x reference assemblies](https://github.com/mono/reference-assemblies)
 
 ## Setting up the environment
-
-**Reference assemblies**
-
-- Get the [reference assemblies]((https://github.com/mono/reference-assemblies))
-- Copy the assembly directories for `4.7.1` and `4.7.2` into `/usr/lib/mono`
-- Rename the directories from `v4.7.x` to `4.7.x-api`
-
-Alternatively you can customize the name(s) and path(s) in the `netfx.props` file.
 
 **SPT development directory**
 
