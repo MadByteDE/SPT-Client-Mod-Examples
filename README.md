@@ -15,7 +15,7 @@ A template/example project for creating SPT client mods on Linux.
 
 #### 2. Edit the `GameDir` property in the `*.csproj` file
 
-- Set it to the root SPT install directory
+- Set it to the SPT install directory
 
 > [!NOTE]
 > <span style="color:lightblue">By default we assume the project directory to be located in a sub-directory of the game directory e.g. `../development/SPTClientModExamples/`</span>
