@@ -9,14 +9,15 @@
             "type": "shell",
             "args": [
                 "build",
+                "-v",
+                "n",
                 "-c",
                 "Release"
             ],
             "group": "build",
             "presentation": {
                 "reveal": "always",
-                "showReuseMessage": false,
-                "close": true
+                "showReuseMessage": true,
             },
             "problemMatcher": "$msCompile"
         },
@@ -26,14 +27,15 @@
             "type": "shell",
             "args": [
                 "build",
+                "-v",
+                "d",
                 "-c",
                 "Debug"
             ],
             "group": "build",
             "presentation": {
                 "reveal": "always",
-                "showReuseMessage": false,
-                "close": true
+                "showReuseMessage": true,
             },
             "problemMatcher": "$msCompile"
         }
